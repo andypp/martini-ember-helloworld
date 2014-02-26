@@ -1,0 +1,14 @@
+<script type="text/x-handlebars" id="index">
+    <div class="page-header">
+        <h1>Hello hai {{% .Name | toUpper %}}!</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                {{#each item in model}}
+                    <li>{{item}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</script>
