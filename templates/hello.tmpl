@@ -1,12 +1,37 @@
 <script type="text/x-handlebars" id="index">
-    <div class="page-header">
-        <h1>Hello hai {{% .Name | toUpper %}}!</h1>
+    <div class="secondary-banner">
+        <div class="container">
+            <h1>Hello, World!</h1>
+            <p class="secondary-para">
+                What&#39;s this??
+            </p>
+            <p class="secondary-para">
+                Nothing. I just have some free time and want to make something while learning stuffs.
+            </p>
+            <p class="secondary-para">
+                Feedback is <strong style="font-size: 20px">very much</strong> appreciated :)
+            </p>
+        </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <ul>
+    <div class="container">
+        <div class="site-boxes">
+            <ul class="site-boxes-list">
                 {{#each item in model}}
-                    <li>{{item}}</li>
+                    <li>
+                        <div class="site-box-header">
+                            {{item.title}}
+                        </div>
+                        <div class="site-box-content">
+                            <p>
+                                {{item.description}}
+                            </p>
+                        </div>
+                        <div class="site-box-footer pull-right">
+                            {{#if item.url}}
+                                <a href="#" class="btn btn-primary">Visit site</a>
+                            {{/if}}
+                        </div>
+                    </li>
                 {{/each}}
             </ul>
         </div>
